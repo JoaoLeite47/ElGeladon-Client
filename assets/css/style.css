@@ -1,0 +1,324 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Anek+Tamil:wght@100;200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  /*corpo e html */
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: #ffffff;
+}
+
+.Home {
+  /*home */
+  position: relative;
+  /*posição relativa, já que os elementos ocupam posição flex*/
+  background-image: radial-gradient(farthest-corner at 40px 40px, #50c5ee 60%, #00d4ff80 100%);
+  min-height: calc(100vh - 60px);
+  /*altura do header*/
+  margin: 15px;
+  padding: 15px;
+  border-radius: 20px;
+  color: #000000;
+  -webkit-box-shadow: 0px 0px 15px #0000004d;
+          box-shadow: 0px 0px 15px #0000004d;
+}
+
+.Home > h2 {
+  /*título do home*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000000;
+}
+
+.Home__container {
+  /*container do home*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem;
+}
+
+@media (max-width: 350px) {
+  /*quando a largura máxima for 350px o justify contenct vai ser unset (responsividade)*/
+  .Home__container {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+}
+
+.PaletaLista {
+  /*lista de paletas*/
+  display: -ms-grid;
+  display: grid;
+  /*grid*/
+  grid-gap: 25px 50px;
+}
+
+@media (max-width: 840px) {
+  /*quando a largura máxima for 840px o justify contenct vai ser unset (responsividade)*/
+  .PaletaLista {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    /*grid*/
+  }
+}
+
+.PaletaCardItem,
+.PaletaListaItem {
+  /*card de paleta*/
+  background: #ffffff4d;
+  border-radius: 10px;
+  padding: 10px;
+  width: 315px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  /*espaçamento entre os elementos*/
+}
+
+.PaletaCardItem {
+  /*card de paleta*/
+  margin: 20px 0;
+  height: 150px;
+  width: 315px;
+}
+
+@media (max-width: 400px) {
+  /*quando a largura máxima for 400px o height vai ser 100px*/
+  .PaletaCardItem,
+  .PaletaListaItem {
+    width: 210px;
+    height: 180px;
+  }
+}
+
+.PaletaCardItem > div,
+.PaletaListaItem > div {
+  /*card de paleta*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.PaletaCardItem__sabor,
+.PaletaListaItem__sabor {
+  /*card de paleta*/
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.PaletaCardItem__descricao,
+.PaletaListaItem__descricao {
+  /*card de paleta*/
+  font-size: 0.85em;
+}
+
+.PaletaCardItem__preco,
+.PaletaListaItem__preco {
+  /*card de paleta*/
+  color: #9400d3;
+}
+
+.PaletaListaItem__foto {
+  /*card de paleta*/
+  height: 150px;
+  margin-right: -60px;
+}
+
+.paleta-escolhida-espaco {
+  /*espaço para a paleta escolhida*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+#idPaleta {
+  /*input da pesquisa da paleta*/
+  padding: 0.5rem;
+  width: 315px;
+  border: none;
+  border-radius: 10px;
+}
+
+#idPaletaButton {
+  /*botão de pesquisa da paleta*/
+  background-color: transparent;
+  border: 2px solid #9400d3;
+  padding: 0.3rem;
+  color: #9400d3;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 315px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#idPaletaButton:hover {
+  /*hover do botão de pesquisa da paleta*/
+  background-color: #9400d3;
+  color: #ffffff;
+}
+
+#paleta-escolhida-input-espaco {
+  /*espaço para a paleta escolhida*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.Header {
+  /*header*/
+  max-width: 1010px;
+  margin: 0 auto 25px auto;
+  position: relative;
+}
+
+.row {
+  /*sacola*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0 35px 0;
+}
+
+.Logo {
+  /*logo*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  background-color: #ffffff4d;
+  width: 340px;
+  height: 45px;
+}
+
+.Logo__titulo {
+  /*título do logo*/
+  position: absolute;
+  left: 50px;
+  font-weight: 600;
+  font-size: 2.5em;
+}
+
+.Logo__icone {
+  /*ícone do logo*/
+  position: absolute;
+  left: -20px;
+  top: -15px;
+}
+
+.Sacola {
+  /*sacola*/
+  position: relative;
+}
+
+.Sacola__icone {
+  /*ícone da sacola*/
+  cursor: pointer;
+}
+
+.Sacola__badge {
+  /*badge da sacola*/
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  color: white;
+  font-size: 0.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 1220px) {
+  /*quando a largura máxima for 1220px o header vai diminuir a width (responsividade)*/
+  .Header {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 840px) {
+  /*quando a largura máxima for 840px o header vai diminuir a width (responsividade)*/
+  .Header {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 400px) {
+  /*quando a largura máxima for 400px o header, row e logo irão diminuir a width (responsividade)*/
+  .Header {
+    max-width: 250px;
+  }
+  .row {
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .Logo__titulo {
+    font-size: 1.5em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
