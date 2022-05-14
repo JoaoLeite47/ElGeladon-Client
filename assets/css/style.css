@@ -72,15 +72,6 @@ html {
   grid-gap: 25px 50px;
 }
 
-@media (max-width: 840px) {
-  /*quando a largura máxima for 840px o justify contenct vai ser unset (responsividade)*/
-  .PaletaLista {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    /*grid*/
-  }
-}
-
 .PaletaCardItem,
 .PaletaListaItem {
   /*card de paleta*/
@@ -176,7 +167,7 @@ html {
   border-radius: 10px;
 }
 
-#idPaletaButton {
+.default-button {
   /*botão de pesquisa da paleta*/
   background-color: transparent;
   border: 2px solid #9400d3;
@@ -191,7 +182,7 @@ html {
   transition: all 0.4s ease-in-out;
 }
 
-#idPaletaButton:hover {
+.default-button:hover {
   /*hover do botão de pesquisa da paleta*/
   background-color: #9400d3;
   color: #ffffff;
@@ -320,5 +311,175 @@ html {
   .Logo__titulo {
     font-size: 1.5em;
   }
+}
+
+.modal-overlay {
+  background-color: #00000050;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: auto;
+}
+
+.modal {
+  margin: 1rem;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  min-height: 300px;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: radial-gradient(farthest-corner at 40px 40px, #50c5ee 60%, #00d4ff80 100%);
+  padding: 1rem;
+}
+
+.close-modal {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.modal-body {
+  padding: 0.5rem 1rem;
+}
+
+.modal-body div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-body div input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  outline: none;
+  border: solid 1px #ccc;
+  margin-bottom: 0.4rem;
+  border-radius: 0.3rem;
+}
+
+.modal-body div button {
+  padding: 0.5rem;
+  width: 30%;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #0097ce;
+  border: solid 1px #0097ce;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-body div button:hover {
+  background-color: #0097ce;
+  color: #fff;
+}
+
+.button-modal-create {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.acoes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  max-width: 280px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 45%;
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.acoes-editar {
+  color: #02a6e7;
+  border: solid 1.2px #02a6e7;
+  background-color: transparent;
+}
+
+.acoes-editar:hover {
+  background-color: #02a6e7;
+  color: #fff;
+}
+
+.acoes-apagar {
+  color: #e70202;
+  border: solid 1.2px #e70202;
+  background-color: transparent;
+}
+
+.acoes-apagar:hover {
+  background-color: #e70202;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
