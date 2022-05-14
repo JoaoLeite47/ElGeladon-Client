@@ -67,10 +67,25 @@ html {
 
 .PaletaLista {
   /*lista de paletas*/
-  display: -ms-grid;
-  display: grid;
-  /*grid*/
+  display: grid; /*grid*/
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px 50px;
+}
+
+@media (max-width: 1220px) {
+  /*quando a largura máxima for 1220px o grid-template-columns vai ser 1fr*/
+  .PaletaLista {
+    grid-template-columns: repeat(2, 1fr); /*grid*/
+  }
+}
+
+@media (max-width: 840px) {
+  /*quando a largura máxima for 840px o justify contenct vai ser unset (responsividade)*/
+  .PaletaLista {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    /*grid*/
+  }
 }
 
 .PaletaCardItem,
