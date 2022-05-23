@@ -20,7 +20,7 @@ async function findAllPaletas() {
             
              <div class="PaletaListaItem_acoes acoes">
                 <button class="acoes-editar btn" onclick="abrirModal(${paleta.id})">Editar</button>
-                <button class="acoes-apagar btn" onclick="modal_deletar(${paleta.id})" >Apagar</button>
+                <button class="acoes-apagar btn" onclick="modal_deletar(${paleta.id})">Apagar</button>
               </div>
 
         </div>
@@ -51,7 +51,7 @@ async function findByIdPaletas() {
 
         <div class="PaletaListaItem_acoes acoes">
         <button class="acoes-editar btn" onclick="abrirModal(${paleta.id})">Editar</button>
-        <button class="acoes-apagar btn" onclick="modal_deletar(${paleta.id}) >Apagar</button>
+        <button class="acoes-apagar btn" onclick="modal_deletar(${paleta.id}") >Apagar</button>
       </div>
 
     </div>
@@ -137,11 +137,11 @@ async function createPaleta(event) {
 
     <div class="PaletaListaItem_acoes acoes">
     <button class="acoes-editar btn" onclick="abrirModal(${paleta.id})">Editar</button>
-    <button class="acoes-apagar btn" onclick="modal_deletar(${paleta.id}) >Apagar</button>
+    <button class="acoes-apagar btn" onclick="modal_deletar(${paleta.id})">Apagar</button>
   </div>
 
   </div>
-  <img class="PaletaListaItem__foto" src="${novaPaleta.foto}" alt="Paleta de ${novaPaleta.sabor}" />
+  <img class= "PaletaListaItem__foto" src="${novaPaleta.foto}" alt="Paleta de ${novaPaleta.sabor}" />
   </div>`;
 
   if (modoEdicaoAtivado) {
@@ -153,7 +153,7 @@ async function createPaleta(event) {
   fecharModal(); //fecha o modal
 }
 
-async function deletePaleta() {
+async function deletePaleta(id) {
   //deleta a paleta
   const response = await fetch(`${baseURL}/delete/${id}`, {
     //fetch é uma função nativa do js com base na roda delete no backend

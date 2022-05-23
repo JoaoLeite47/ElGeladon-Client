@@ -17,13 +17,10 @@ html {
 .Home {
   /*home */
   position: relative; /*posição relativa, já que os elementos ocupam posição flex*/
-  background-image: linear-gradient(
-    to top,
-    #20c6f2,
-    #1dc4f0,
-    #1ac2ef,
-    #16c0ed,
-    #12beeb
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #50c5ee 60%,
+    rgba(0, 212, 255, 0.5) 100%
   );
   min-height: calc(100vh - 60px); /*altura do header*/
   margin: 15px;
