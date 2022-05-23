@@ -96,6 +96,7 @@ function fecharModal() {
   document.querySelector('#preco').value = 0;
   document.querySelector('#descricao').value = '';
   document.querySelector('#foto').value = '';
+  document.querySelector('#id').value = '';
 }
 
 async function createPaleta(event) {
@@ -113,7 +114,7 @@ async function createPaleta(event) {
     foto,
   };
   const modoEdicaoAtivado = id > 0; //se o id for maior que 0 então é modo edição
-
+  console.log(modoEdicaoAtivado);
   const endpoint =
     baseURL + (modoEdicaoAtivado ? `/update/${id}` : `/create/${id}`); //se for modo edição, altera o endpoint para update, se não, altera para create
 
